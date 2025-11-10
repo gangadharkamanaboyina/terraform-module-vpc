@@ -114,10 +114,10 @@ resource "aws_nat_gateway" "nat" {
     tags = merge (
     var.tags,
     {
-        Name = "${local.common_name}"   
+        Name = "${local.common_name}-nat"   
     }
   )
-  depends_on = [aws_eip.nat]
+  depends_on = [aws_internet_gateway.igw]
 }
 
 resource "aws_route" "private" {
