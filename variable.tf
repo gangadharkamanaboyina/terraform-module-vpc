@@ -1,9 +1,9 @@
 variable "project" {
-    default = "Roboshop"
+    type = string
 }
 
 variable "env" {
-    default = "dev"
+    type = string
 }
 
 variable "tags" {
